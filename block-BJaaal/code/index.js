@@ -38,9 +38,8 @@ const taxPercent = 10;
   - Above message should be in two lines
 */
 
-let taxAmount = (amount * taxPercent) / 100;
-alert(`The total amount is ${amount} 
-and the tax amount is ${taxAmount}`);
+alert(`The total amount is ${amount}
+and the tax amount is ${(amount * taxPercent) / 100}`);
 
 /* Use double quote and escape character:
   - Alert a message saying `The total amount is [amount]
@@ -49,5 +48,4 @@ and the tax amount is ${taxAmount}`);
   - Above message should be in two lines
 */
 
-alert(\"The total amount is" + " " + amount + \n
-"and the tax amount is" + " " + taxAmount);
+alert ("The total amount is" + " " + amount + "\nand the tax amount is" + " " + ((amount * taxPercent) / 100));
