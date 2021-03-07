@@ -99,10 +99,13 @@ else if (monthNum == 2) {
 */
 
 let totalSalary = Number(prompt('Enter the total salary'));
-if (totalSalary <=20000) {
+if (totalSalary <= 20000) {
   let inHand = totalSalary - (10 * totalSalary)/100;
   alert(`'In Hand salary is' ${inHand}`);
-}
+} else if (totalSalary <= 40000) {
+  let inHand = totalSalary - (20 * totalSalary)/100;
+} else if (totalSalary > 50000) {
+  let inHand = totalSalary - (30 * totalSalary)/100;
 
 //  if..else vs switch
 
