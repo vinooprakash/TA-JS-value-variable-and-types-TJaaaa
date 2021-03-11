@@ -6,16 +6,15 @@
 4. Now change the value of `user` to `John` and log the value of both `user` and `userName`.
 */
 
-// 1
 let user = prompt('Enter your name');
 alert(`Your name is ${user}`);
-//2
+
 let userName = user;
 console.log(user);
 console.log(userName);
-//3
+
 let age = 22, isLearning = true;
-//4
+
 user = 'John';
 console.log(user);
 console.log(userName);
