@@ -27,6 +27,7 @@ let numA = Number(prompt(`Enter the value of numA`));
 let numB = Number(prompt(`Enter the value of numB`));
 let sum = numA + numB;
 alert(`The sum of ${numA} and ${numB} is ${sum}`);
+
 // Loops
 
 // 3. Complete the following code to make the output be 0 2 4 6 8 10?
@@ -80,13 +81,11 @@ Example:
 
 */
 
-let num1 = Number(prompt('Enter value for num1'));
-let num2 = Number(prompt('Enter value for num2'));
-if((num1 == `true`) || (num1 == `null`) || (num1 == `undefined`)){
-  alert(`Enter a valid value`);
-}
-if(num1 === num2){
-  alert(`true`);
+let num1 = +prompt('Enter value for num1');
+let num2 = +prompt('Enter value for num2');
+
+if(isNaN(num1) || isNaN(num2)) {
+  alert(`Enter a valid number`);
 } else {
-  alert(`false`);
-} 
+  alert(num1 === num2);
+}
