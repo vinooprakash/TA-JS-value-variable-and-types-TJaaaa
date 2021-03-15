@@ -33,12 +33,17 @@ n = 7 => output: heeeeeeello
 👇
 */
 
-let n = +prompt(`Enter the value of n`);
-let result = "";
-for(let k = 0; k <= n; k++) {
-  result = result + k;
+let count = +prompt(`Enter the number of e`);
+
+const beginning = "h";
+const end = "llo";
+let middle = "";
+
+for(let k = 0; k < count; k++) {
+  middle += "e";
 }
-alert(`h+ ${result} + llo`);
+
+alert(beginning + middle + end);
 
 /*
 Program to calculate the sum of first n natural numbers(1,2,3...n are known as natural numbers). Prompt user to enter n (using `prompt`) then based on input provided calculate and show result in `alert`.
