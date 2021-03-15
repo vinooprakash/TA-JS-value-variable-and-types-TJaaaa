@@ -14,16 +14,23 @@ const ACCESSORY_PRICE = 9.99;
 var bank_balance = 303.91;
 var amount = 0;
 
-while (bank_balance >= 0) {
-  alert(`Press Enter to BUY PHONE & Accessories`);
-  bank_balance = bank_balance - (PHONE_PRICE - ACCESSORY_PRICE);
-  amount = amount + bank_balance + TAX_RATE;
-  if(bank_balance <= SPENDING_THRESHOLD) {
-    alert(`You cannot BUY Accessories anymore!`);
+while (amount < bank_balance) {
+  amount += PHONE_PRICE;
+  if(amount < SPENDING_THRESHOLD) {
+    amount += ACCESSORY_PRICE;
   }
 }
 
-alert(`Your Purchase Amount is $${amount}`);
+let tax = amount * TAX_RATE;
+let taxedAmount = amount + tax;
+
+alert(`Your Taxed Amount is $${taxedAmount}`);
+
+if (taxedAmount < bank_balance) {
+  alert(`You can afford to buy`);
+} else {
+  alert(`You cannot afford anymore`);
+}
 
 
 
