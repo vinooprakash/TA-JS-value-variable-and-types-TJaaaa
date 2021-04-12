@@ -29,7 +29,7 @@ alert(`Your Taxed Amount is $${taxedAmount}`);
 if (taxedAmount < bank_balance) {
   alert(`You can afford to buy`);
 } else {
-  alert(`You cannot afford anymore`);
+  alert(`You cannot afford this anymore`);
 }
 
 
