@@ -11,6 +11,18 @@ Write a program that asks the user his/her age and check for the following condi
 👇
 */
 
+let age = +prompt(`Enter your age`);
+
+if ((age >= 12) && (age <= 55)) {
+  alert(`You can participate in the marathon`);
+} else if ((age >= 4) && (age <= 11)) {
+  alert(`You are too young to participate in the marathon`);
+} else if (age < 4) {
+  alert(`Hey Kiddo! Can you walk?`);
+} else if (age > 55) {
+  alert(`You are too old to participate in the marathon`);
+}
+
 // Loops
 /*
 Given a positive integer `n`. Print the word (hello) in format of heeeello (letter 'e' must be repeated `n` times). Take input from prompt and print the result in alert.
@@ -20,13 +32,24 @@ n = 1 => output: hello
 n = 7 => output: heeeeeeello
 👇
 */
-// [Your code goes here]
+
+let n = +prompt(`Enter the value of n`);
+let result = "";
+for(let k = 1; k <= n; k++) {
+  result += "e";
+}
+alert(`h${result}llo`);
 
 /*
 Program to calculate the sum of first n natural numbers(1,2,3...n are known as natural numbers). Prompt user to enter n (using `prompt`) then based on input provided calculate and show result in `alert`.
 👇
 */
-// [Your code goes here]
+let n = +prompt(`Enter the number of natural numbers`);
+let sum = 0;
+for (let i = 1; i <= n; i++) {
+  sum = (n*(n+1))/2;
+}
+alert(`Sum of ${n} numbers is ${sum}`);
 
 /* Switch Statement
 
@@ -45,7 +68,7 @@ Take a number value from user and alert the message if it matches the conditions
 * [ ] PLEASE TRY AGAIN, if  is none of the above.
 
 */
-// [Your code goes here]
+
 
 /*
 🎖Using switch statement do the following
